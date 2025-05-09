@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #66B2FF, #003366);
+  color: white;
+  padding-top: 60px;
+}
+
+#navbar {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#navbar a {
+  margin: 0 15px;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  color: gold;
+}
+
+#welcome-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#welcome-section p {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, #002244, #000C1A);
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.project-tile {
+  width: 270px;  
+  height: 240px;  
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  overflow: hidden;
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-tile h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF;
+  margin: 0 0 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-image {
+  width: 100%;
+  height: 170px; 
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;  
+}
+
+.project-tile p {
+  font-size: 1rem;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin: 0; 
+}
+
+.project-tile:hover {
+  background-color: #006BB3;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile:hover h3 {
+  color: white;
+}
+
+.project-tile:active {
+  background-color: #005494;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #navbar a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-tile {
+    width: 230px;
+    height: 260px;  /
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar a {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-tile {
+    width: 100%;
+    max-width: 270px;
+    height: 260px;  
+    margin: 10px auto;
+  }
+}
